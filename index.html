@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Niña - Ariel Camacho 🎸</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #d7c0ae; 
+            background-image: 
+                radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px),
+                radial-gradient(circle, rgba(102, 66, 41, 0.1) 2px, transparent 2px);
+            background-size: 40px 40px, 80px 80px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 35px 25px;
+            border-radius: 30px;
+            text-align: center;
+            z-index: 10;
+            max-width: 480px;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 35px rgba(102, 66, 41, 0.15);
+            color: #4a3b32;
+        }
+
+        .titulo-principal {
+            font-size: 2.4rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #3d2c22;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+        }
+
+        .foto-container {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #ffffff;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .foto-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dedicatoria {
+            font-size: 1.35rem;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-style: italic;
+            color: #2b1d15;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-spotify {
+            background-color: #3d2c22;
+            color: #ffffff;
+            border: none;
+            padding: 14px 40px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, background-color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-spotify:hover {
+            transform: scale(1.05);
+            background-color: #543d30;
+        }
+
+        .palabra-flotante {
+            position: absolute;
+            top: -60px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(102, 66, 41, 0.6), -1px -1px 0 rgba(255,255,255,0.3);
+            white-space: nowrap;
+            pointer-events: none;
+            user-select: none;
+            animation: caer linear infinite;
+        }
+
+        @keyframes caer {
+            0% { transform: translateY(0) scale(0.8) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.85; }
+            90% { opacity: 0.85; }
+            100% { transform: translateY(108vh) scale(1.1) rotate(20deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="titulo-principal">Mi niña ❤️</div>
+        
+        <div class="foto-container">
+            <img src="https://i.postimg.cc/qR1Hh28k/ariel-camacho.jpg" alt="Ariel Camacho">
+        </div>
+        
+        <div class="dedicatoria">
+            "Esta te la dedico mi niña aunque no tengamos nada." 🎸✨
+        </div>
+
+        <!-- Botón con el nuevo link de la canción -->
+        <a href="https://open.spotify.com/track/7DxKfCYXYXs0NZt7kGA8CT?si=ucWhopfvRk2lRRcf1U0yzQ&utm_source=copy-link" target="_blank" class="btn-spotify">
+            💝 Presióname 💝
+        </a>
+    </div>
+
+    <script>
+        const palabras = [
+            "Mi niña ❤️", "Mi princesita 👑", "Mi hermosa 🌹", "Mi bonita 🌸",
+            "Mi reina 👑", "Mi vida 💖", "Mi cielo ☁️", "Mi luz ✨",
+            "Mi personita 🫶", "Mi consentida 💕", "Mi angelito 😇", "Mi tesoro 💎",
+            "Mi estrella ⭐", "Mi sol ☀️", "Mi muñequita 🧸", "Mi flor 🌺"
+        ];
+
+        function crearPalabra() {
+            const elemento = document.createElement('div');
+            elemento.classList.add('palabra-flotante');
+            
+            const p = Math.random();
+            if (p > 0.85) elemento.innerText = "🎸";
+            else if (p > 0.7) elemento.innerText = "🤠";
+            else if (p > 0.55) elemento.innerText = "🎵";
+            else elemento.innerText = palabras[Math.floor(Math.random() * palabras.length)];
+            
+            elemento.style.left = Math.random() * 90 + "vw"; 
+            const duracion = Math.random() * 4 + 5;
+            elemento.style.animationDuration = duracion + "s";
+            elemento.style.fontSize = (Math.random() * 0.4 + 1.1) + "rem";
+
+            document.body.appendChild(elemento);
+            setTimeout(() => elemento.remove(), duracion * 1000);
+        }
+
+        setInterval(crearPalabra, 450);
+    </script>
+</body>
+</html>
+
+```
+¿Te gustaría que personalizara alguna otra frase o detalle en el diseño?
+
