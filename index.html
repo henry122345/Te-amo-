@@ -27,8 +27,9 @@
             position: relative;
         }
 
+        /* Tarjeta translúcida central */
         .card {
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.45);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             padding: 35px 25px;
@@ -42,6 +43,7 @@
             color: #4a3b32;
         }
 
+        /* Título Principal */
         .titulo-principal {
             font-size: 2.4rem;
             font-weight: bold;
@@ -50,11 +52,13 @@
             text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
         }
 
+        /* Contenedor adaptado para tu foto */
         .foto-container {
-            width: 160px;
-            height: 160px;
+            width: 100%;
+            max-width: 300px;
+            height: 300px;
             margin: 0 auto 20px auto;
-            border-radius: 50%;
+            border-radius: 20px;
             overflow: hidden;
             border: 4px solid #ffffff;
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
@@ -66,16 +70,17 @@
             object-fit: cover;
         }
 
-        .dedicatoria {
-            font-size: 1.35rem;
+        /* Frase exacta de la imagen */
+        .descripcion-frase {
+            font-size: 1.3rem;
             line-height: 1.5;
             margin-bottom: 25px;
-            font-weight: 600;
-            font-style: italic;
+            font-weight: bold;
             color: #2b1d15;
-            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
         }
 
+        /* Botón "Presióname" */
         .btn-spotify {
             background-color: #3d2c22;
             color: #ffffff;
@@ -98,6 +103,7 @@
             background-color: #543d30;
         }
 
+        /* Lluvia de palabras flotantes */
         .palabra-flotante {
             position: absolute;
             top: -60px;
@@ -123,15 +129,17 @@
     <div class="card">
         <div class="titulo-principal">Mi niña ❤️</div>
         
+        <!-- Tu foto colocada exitosamente -->
         <div class="foto-container">
-            <img src="https://i.postimg.cc/qR1Hh28k/ariel-camacho.jpg" alt="Ariel Camacho">
+            <img src="https://i.postimg.cc/mD3fNq8c/ariel-beso.jpg" alt="Ariel Camacho Frase">
         </div>
         
-        <div class="dedicatoria">
-            "Esta te la dedico mi niña aunque no tengamos nada." 🎸✨
+        <!-- Frase exacta de tu imagen -->
+        <div class="descripcion-frase">
+            "Sacrificarme por un beso tuyo sería un honor si estás a mi lado.." 💋🎸
         </div>
 
-        <!-- Botón con el nuevo link de la canción -->
+        <!-- Botón que abre tu canción de Spotify -->
         <a href="https://open.spotify.com/track/7DxKfCYXYXs0NZt7kGA8CT?si=ucWhopfvRk2lRRcf1U0yzQ&utm_source=copy-link" target="_blank" class="btn-spotify">
             💝 Presióname 💝
         </a>
@@ -170,5 +178,3 @@
 </html>
 
 ```
-¿Te gustaría que personalizara alguna otra frase o detalle en el diseño?
-
