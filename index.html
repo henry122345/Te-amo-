@@ -27,12 +27,12 @@
             position: relative;
         }
 
-        /* Tarjeta translúcida central */
+        /* Tarjeta translúcida central sin contenedor de imagen */
         .card {
             background: rgba(255, 255, 255, 0.45);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            padding: 35px 25px;
+            padding: 45px 30px;
             border-radius: 30px;
             text-align: center;
             z-index: 10;
@@ -45,42 +45,43 @@
 
         /* Título Principal */
         .titulo-principal {
-            font-size: 2.4rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
             color: #3d2c22;
             text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
         }
 
-        /* Contenedor adaptado para tu foto */
-        .foto-container {
-            width: 100%;
-            max-width: 300px;
-            height: 300px;
-            margin: 0 auto 20px auto;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 4px solid #ffffff;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
-
-        .foto-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Frase exacta de la imagen */
+        /* Frase principal de Ariel Camacho */
         .descripcion-frase {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             line-height: 1.5;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             font-weight: bold;
             color: #2b1d15;
             text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
         }
 
-        /* Botón "Presióname" */
+        /* Separador estético sutil */
+        .divisor {
+            width: 50%;
+            height: 2px;
+            background: rgba(61, 44, 34, 0.2);
+            margin: 20px auto;
+        }
+
+        /* Tu nueva dedicatoria especial abajo */
+        .dedicatoria-amor {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin-bottom: 35px;
+            font-style: italic;
+            font-weight: 600;
+            color: #3d2c22;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.6);
+        }
+
+        /* Botón "Presióname" estilo campirano exacto */
         .btn-spotify {
             background-color: #3d2c22;
             color: #ffffff;
@@ -103,13 +104,13 @@
             background-color: #543d30;
         }
 
-        /* Lluvia de palabras flotantes */
+        /* Lluvia de palabras y emojis flotantes */
         .palabra-flotante {
             position: absolute;
             top: -60px;
             font-weight: bold;
             color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(102, 66, 41, 0.6), -1px -1px 0 rgba(255,255,255,0.3);
+            text-shadow: 2px 2px 4px rgba(102, 66, 41, 0.5), -1px -1px 0 rgba(255,255,255,0.3);
             white-space: nowrap;
             pointer-events: none;
             user-select: none;
@@ -129,14 +130,16 @@
     <div class="card">
         <div class="titulo-principal">Mi niña ❤️</div>
         
-        <!-- Tu foto colocada exitosamente -->
-        <div class="foto-container">
-            <img src="https://i.postimg.cc/mD3fNq8c/ariel-beso.jpg" alt="Ariel Camacho Frase">
-        </div>
-        
-        <!-- Frase exacta de tu imagen -->
+        <!-- Frase de la imagen anterior -->
         <div class="descripcion-frase">
             "Sacrificarme por un beso tuyo sería un honor si estás a mi lado.." 💋🎸
+        </div>
+
+        <div class="divisor"></div>
+        
+        <!-- Tu nueva dedicatoria añadida abajo -->
+        <div class="dedicatoria-amor">
+            "Aunque no seamos nada yo voy a seguir luchando por tu amor mi niña" 💖✨
         </div>
 
         <!-- Botón que abre tu canción de Spotify -->
